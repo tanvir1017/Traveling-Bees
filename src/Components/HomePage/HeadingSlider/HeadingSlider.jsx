@@ -37,7 +37,6 @@ export default class SimpleSlider extends Component {
               <h1>Summer Paradise</h1>
               <small>March 17-2021</small>
           </div>
-            
           </div>
           <div className="slider_wrapper">
             <img className="img-fluid w-100" src="https://demos.jeweltheme.com/alpena/images/banner/3.jpg" alt="" />

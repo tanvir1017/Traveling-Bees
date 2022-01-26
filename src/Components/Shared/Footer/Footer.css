@@ -1,0 +1,79 @@
+.footer_section {
+  background-image: linear-gradient(
+      rgba(58, 57, 57, 0.74) 0%,
+      rgb(102, 138, 121)
+    ),
+    url(https://i.ibb.co/T1p5HLj/bg.jpg);
+  background-size: cover;
+  padding: 80px;
+  margin-top: 100px;
+  box-sizing: border-box;
+}
+.brand_name {
+  font-weight: 800;
+}
+.logo p {
+  color: rgb(255, 255, 255);
+  text-align: justify;
+}
+.social_icon {
+  display: flex;
+}
+.social_icon img {
+  background: rgb(221, 221, 221);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 15px 0px;
+  width: 40px;
+}
+.copyRightText p {
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+/* .course_category_list */
+.course_category_heading {
+  text-align: left;
+  color: rgb(202, 201, 201);
+  margin: 0px 15px;
+}
+.course_category_list {
+  text-align: left;
+}
+.course_category_list ul {
+  position: relative;
+}
+.course_category_list ul li {
+  margin: 10px;
+  list-style: none;
+  color: rgb(202, 201, 201);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.course_category_list ul li:hover {
+  transform: translateX(4px);
+  color: #24cb83;
+}
+/* .course_category_list */
+
+@media only screen and (max-width: 600px) {
+  .footer_section {
+    padding: 40px;
+    margin-top: 100px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer_columns {
+    margin-top: 38px;
+  }
+}
+@media (min-width: 992px) {
+  .footer_columns {
+    margin-top: 0px;
+  }
+}
