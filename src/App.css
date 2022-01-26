@@ -1,3 +1,13 @@
+.ubuntu_fonts {
+  font-family: "Ubuntu", sans-serif;
+}
+.Lobster_fonts {
+  font-family: "Lobster", cursive;
+}
+.comforter_fonts {
+  font-family: "Comforter", cursive;
+}
+
 .App {
   text-align: center;
 }

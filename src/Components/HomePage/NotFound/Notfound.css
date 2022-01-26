@@ -1,0 +1,21 @@
+.notFoundRow {
+  position: relative;
+}
+.homeNavigate {
+  margin-top: -60px;
+}
+.homeNavigate a {
+  text-align: center;
+  background-image: linear-gradient(45deg, #0178a7, #08b1ff);
+  padding: 12px 40px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .homeNavigate {
+    margin-top: -10px;
+  }
+}

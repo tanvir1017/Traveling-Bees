@@ -1,0 +1,16 @@
+.lifestyle_img_wrapper {
+  margin: 100px 0px;
+}
+.life_style_text {
+  margin-top: 20px;
+}
+.life_style_text h4 {
+  color: #707070;
+  font-family: "Ubuntu", sans-serif;
+}
+.life_style_text small {
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #707070;
+}

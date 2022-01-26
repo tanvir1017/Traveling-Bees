@@ -1,0 +1,91 @@
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d1d1d1;
+}
+.all_courses {
+  color: #707070 !important;
+  font-weight: 500;
+  margin-left: 8px;
+  width: 100%;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.nav_icons img {
+  width: 35px;
+  cursor: pointer;
+}
+.nav_item_pic {
+  width: 60px;
+  height: 60px;
+}
+.nav_item_pic img {
+  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+}
+.registation_nav {
+  color: #707070 !important;
+  font-weight: 700;
+  margin-left: 8px;
+  width: 100%;
+  border-radius: 6px;
+  /* background-image: linear-gradient(5deg, #22eca6, #0c77839c); */
+  transition: 0.2s;
+  cursor: pointer;
+}
+.registation_nav img {
+  width: 20px;
+  margin-right: 5px;
+}
+.handBarger_menu img {
+  width: 25px;
+}
+.handBarger_menu_btn {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.Without_login_img img {
+  width: 50px;
+}
+.social_nav_img {
+  background-color: #e4e4e485;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 27px;
+}
+/* 600 px responsiveness here */
+@media only screen and (max-width: 600px) {
+  .search_bar {
+    width: 100%;
+  }
+  .registation_nav {
+    width: 100%;
+  }
+  .all_courses {
+    margin-left: 0px;
+  }
+  .handBarger_menu_btn {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .handBarger_menu_btn {
+    display: block;
+  }
+  .registation_nav {
+    width: 30%;
+  }
+}
+@media (min-width: 992px) {
+  .handBarger_menu_btn {
+    display: none;
+  }
+  .registation_nav {
+    width: 100%;
+  }
+}
