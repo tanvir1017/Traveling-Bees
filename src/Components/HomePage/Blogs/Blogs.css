@@ -5,9 +5,15 @@
 }
 .blog_columns {
   width: 370px;
+
   margin-top: 20px;
   margin-right: 10px;
   box-shadow: 2px 4px 7px rgb(202, 202, 202);
+  overflow: hidden;
+}
+.blog_columns img {
+  width: 770px;
+  height: auto;
 }
 .blog_body {
   margin: 0px 10px;

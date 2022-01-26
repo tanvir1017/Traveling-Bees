@@ -10,6 +10,8 @@ import ManageOrder from "./Components/DashBoard/ManageOrder/ManageOrder";
 import PaymentDash from "./Components/DashBoard/PaymentDash/PaymentDash";
 import Review from "./Components/DashBoard/Review/Review";
 import UserOrders from "./Components/DashBoard/UserOrder/UserOrders";
+import BLogDetails from "./Components/HomePage/BLogDetails/BLogDetails";
+import ExploreBlogs from "./Components/HomePage/ExploreBlogs/ExploreBlogs";
 import Home from "./Components/HomePage/Home/Home";
 import NotFound from "./Components/HomePage/NotFound/NotFound";
 import PrivateRoute from "./Components/Private/PrivateRoute";
@@ -24,23 +26,23 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/home" element={<Home />}></Route>
-            {/* 
-             <Route
-               path="/courses"
-               element={
-                 <PrivateRoute>
-                   <Courses />
-                 </PrivateRoute>
-               }
-             />
-             <Route
-               path="/courses/:courseId"
-               element={
-                 <PrivateRoute>
-                   <CourseDetails />
-                 </PrivateRoute>
-               }
-             /> */}
+
+            <Route
+              path="/explore-blogs"
+              element={
+                <PrivateRoute>
+                  <ExploreBlogs />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/blogs/:id"
+              element={
+                <PrivateRoute>
+                  <BLogDetails />
+                </PrivateRoute>
+              }
+            />
             <Route
               path="/dashboard"
               element={

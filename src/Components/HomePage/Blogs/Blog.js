@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Blogs.css";
 
 const Blog = ({ blog }) => {
-  const { title, sub_desc, blog_cover, posted_time } = blog;
+  const { _id, title, sub_desc, blog_cover, posted_time } = blog;
   return (
     <div className="col-lg-4 col-md-3 col-12  p-0">
       <div className="blog_columns">
@@ -24,7 +24,7 @@ const Blog = ({ blog }) => {
             <p>
               {sub_desc.slice(0, 100)}{" "}
               <span className="">
-                <Link to="/">Read More...</Link>
+                <Link to={`/blogs/${_id}`}>Read More...</Link>
               </span>
             </p>
           </div>

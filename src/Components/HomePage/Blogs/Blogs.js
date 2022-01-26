@@ -5,7 +5,7 @@ import "./Blogs.css";
 const Blogs = () => {
   const [blogPost, setBlogPost] = useState([]);
   useEffect(() => {
-    fetch("./fakedb.json")
+    fetch("http://localhost:5000/blogs")
       .then((res) => res.json())
       .then((data) => {
         setBlogPost(data);
