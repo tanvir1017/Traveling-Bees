@@ -17,3 +17,25 @@
 .list_of_route a:focus .dashboard_link_img_icon img {
   transform: rotate(-20deg);
 }
+.notification {
+  position: relative;
+}
+.notification_length {
+  position: absolute;
+  top: 2px;
+  left: 14px;
+  background: #0fb400;
+  width: 18px;
+  height: 18px;
+  padding: 3px;
+  border-radius: 100%;
+}
+.notification_length small {
+  color: rgb(255, 255, 255);
+  font-size: 11px;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  transform: translate(225%, 60%);
+  font-weight: 400;
+}

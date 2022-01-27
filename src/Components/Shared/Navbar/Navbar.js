@@ -14,6 +14,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const { user, logout } = UseAuth();
+
   return (
     <>
       <nav className="navbar sticky-top navbar-expand-lg navbar-light ">

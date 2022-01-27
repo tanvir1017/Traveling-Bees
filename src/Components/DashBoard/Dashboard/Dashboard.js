@@ -27,6 +27,16 @@ function Nav(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  const [blogPost, setBlogPost] = React.useState([]);
+  React.useEffect(() => {
+    fetch(`http://localhost:5000/blogs`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.length);
+        const remaining = data.filter((post) => post.approved === false);
+        setBlogPost(remaining);
+      });
+  }, []);
   const drawer = (
     <div>
       <Toolbar />
@@ -77,12 +87,12 @@ function Nav(props) {
             Blogs
           </Link>
         </List>{" "}
-        <List>
+        <List className="notification">
           <Link
             className="text-decoration-none text-white d-flex align-items-center "
             to="/dashboard/notification"
           >
-            <span className="me-3 dashboard_link_img_icon">
+            <span className="me-3  dashboard_link_img_icon">
               <img
                 className="img-fluid"
                 width="25px"
@@ -90,7 +100,10 @@ function Nav(props) {
                 alt=""
               />
             </span>{" "}
-            Notification
+            Notification{" "}
+            <span className="notification_length">
+              <small>{blogPost.length}</small>
+            </span>
           </Link>
         </List>{" "}
         <List>

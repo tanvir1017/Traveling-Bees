@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Blog from "./Blog";
 import "./Blogs.css";
 
@@ -9,7 +10,8 @@ const Blogs = () => {
     fetch(`http://localhost:5000/blogs?size=${size}`)
       .then((res) => res.json())
       .then((data) => {
-        setBlogPost(data);
+        const remaining = data.filter((blog) => blog.approved === true);
+        setBlogPost(remaining);
       });
   }, []);
 
@@ -25,6 +27,11 @@ const Blogs = () => {
         {blogPost.map((blog) => (
           <Blog key={blog._id} blog={blog}></Blog>
         ))}
+      </div>
+      <div className="explore_btn">
+        <Link to="/explore-blogs" className="default_btn">
+          See More Blogs
+        </Link>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import DashboardHome from "./Components/DashBoard/DashboardHome/DashboardHome";
 import ManageOrder from "./Components/DashBoard/ManageOrder/ManageOrder";
 import Notification from "./Components/DashBoard/Notification/Notification";
 import Review from "./Components/DashBoard/Review/Review";
+import ReviewPostedBlogs from "./Components/DashBoard/ReviewPostedBlogs/ReviewPostedBlogs";
 import UserOrders from "./Components/DashBoard/UserOrder/UserOrders";
 import BLogDetails from "./Components/HomePage/BLogDetails/BLogDetails";
 import ExploreBlogs from "./Components/HomePage/ExploreBlogs/ExploreBlogs";
@@ -115,6 +116,14 @@ function App() {
                   </PrivateRoute>
                 }
               ></Route>
+              <Route
+                path="/dashboard/review-blogs/:id"
+                element={
+                  <PrivateRoute>
+                    <ReviewPostedBlogs />
+                  </PrivateRoute>
+                }
+              />
             </Route>
 
             <Route path="/signUp" element={<SignUp />} />
