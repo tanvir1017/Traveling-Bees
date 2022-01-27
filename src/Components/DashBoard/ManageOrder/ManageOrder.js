@@ -7,7 +7,9 @@ const ManageOrder = () => {
 
   const [editBlogs, setEditBlogs] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/blogs/manageOrders/${id}`)
+    fetch(
+      `https://peaceful-castle-84704.herokuapp.com/blogs/manageOrders/${id}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setEditBlogs(data);
@@ -32,13 +34,16 @@ const ManageOrder = () => {
   } = editBlogs;
   const handleLoading = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:5000/blogs/manageOrders/${id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(editBlogs),
-    })
+    fetch(
+      `https://peaceful-castle-84704.herokuapp.com/blogs/manageOrders/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(editBlogs),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

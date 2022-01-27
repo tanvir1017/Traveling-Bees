@@ -7,7 +7,7 @@ const AllCourses = () => {
   const [blogs, setBlogs] = useState([]);
   const [num, setNum] = useState(0);
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://peaceful-castle-84704.herokuapp.com/blogs")
       .then((res) => res.json())
       .then((data) => {
         const remaining = data.result.filter((blog) => blog.approved === true);
@@ -15,7 +15,7 @@ const AllCourses = () => {
       });
   }, []);
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/blogs/${id}`, {
+    fetch(`https://peaceful-castle-84704.herokuapp.com/blogs/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

@@ -9,7 +9,7 @@ const MakeAdmin = () => {
   const handleMakeAdmin = (e) => {
     e.preventDefault();
     const user = { email };
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://peaceful-castle-84704.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

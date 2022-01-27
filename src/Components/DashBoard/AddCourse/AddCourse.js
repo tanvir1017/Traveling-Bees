@@ -10,7 +10,7 @@ const AddCourse = () => {
   const handleLoading = (e) => {
     e.preventDefault();
     console.log(blogPost);
-    fetch("http://localhost:5000/blogs", {
+    fetch("https://peaceful-castle-84704.herokuapp.com/blogs", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -9,7 +9,9 @@ const Blogs = () => {
   const [page, setPage] = useState(0);
   const size = parseInt(6);
   useEffect(() => {
-    fetch(`http://localhost:5000/blogs?page=${page}&&size=${size}`)
+    fetch(
+      `https://peaceful-castle-84704.herokuapp.com/blogs?page=${page}&&size=${size}`
+    )
       .then((res) => res.json())
       .then((data) => {
         const remaining = data.result.filter((blog) => blog.approved === true);

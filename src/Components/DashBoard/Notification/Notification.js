@@ -7,7 +7,7 @@ const Notification = () => {
   const [postedBlogs, setPostedBlogs] = useState([]);
   const [num, setNum] = useState(0);
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://peaceful-castle-84704.herokuapp.com/blogs")
       .then((res) => res.json())
       .then((data) => {
         const remaining = data.result.filter((blog) => blog.approved === false);
@@ -16,7 +16,7 @@ const Notification = () => {
       });
   }, []);
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/blogs/${id}`, {
+    fetch(`https://peaceful-castle-84704.herokuapp.com/blogs/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -45,7 +45,7 @@ const Notification = () => {
   };
   const handleApproved = (e, _id) => {
     const approved = e;
-    fetch(`http://localhost:5000/blogs/${_id}`, {
+    fetch(`https://peaceful-castle-84704.herokuapp.com/blogs/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

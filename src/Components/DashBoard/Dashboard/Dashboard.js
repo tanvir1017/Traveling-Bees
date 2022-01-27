@@ -29,7 +29,7 @@ function Nav(props) {
   };
   const [blogPost, setBlogPost] = React.useState([]);
   React.useEffect(() => {
-    fetch(`http://localhost:5000/blogs`)
+    fetch(`https://peaceful-castle-84704.herokuapp.com/blogs`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data.length);
