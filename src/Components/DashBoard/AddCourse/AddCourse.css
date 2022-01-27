@@ -1,0 +1,50 @@
+.default_style {
+  border: none;
+  background: #e2e2e2d5;
+  width: 100%;
+  margin: 5px;
+  height: 50px;
+  padding: 6px;
+  font-size: 600;
+  border-radius: 5px;
+  border: 2px solid #e2e2e2d5;
+  transition: 0.4s;
+}
+.default_style:focus {
+  border: 2px solid #24cb8366;
+  box-shadow: 2px 2px 8px rgb(195, 247, 190);
+  outline: none;
+}
+textarea {
+  border: none;
+  background: #e2e2e2d5;
+  width: 100%;
+  margin: 5px;
+  padding: 6px;
+  font-size: 600;
+  border-radius: 5px;
+  border: 2px solid #e2e2e2d5;
+  transition: 0.4s;
+  resize: none;
+}
+textarea:focus {
+  border: 2px solid #24cb8366;
+  box-shadow: 2px 2px 8px rgb(133, 250, 122);
+  outline: none;
+}
+.post_form {
+  margin: 50px 0px;
+}
+.default_btn {
+  padding: 10px 30px;
+  border: none;
+  font-weight: 700;
+  box-shadow: 2px 2px 8px rgb(133, 250, 122);
+  background: #42ffad;
+  border-radius: 8px;
+  transition: 0.4s;
+  margin-top: 30px;
+}
+.default_btn:focus {
+  transform: translateY(-3px);
+}

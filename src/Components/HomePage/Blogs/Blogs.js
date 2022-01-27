@@ -4,8 +4,9 @@ import "./Blogs.css";
 
 const Blogs = () => {
   const [blogPost, setBlogPost] = useState([]);
+  const size = 6;
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch(`http://localhost:5000/blogs?size=${size}`)
       .then((res) => res.json())
       .then((data) => {
         setBlogPost(data);

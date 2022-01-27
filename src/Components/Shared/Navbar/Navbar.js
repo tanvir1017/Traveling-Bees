@@ -42,24 +42,49 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="d-flex justify-content-center align-items-center nav-item">
-                <Link to="/" className="nav-link active  all_courses" alt="">
-                  Archives
-                </Link>
+                <a
+                  href="#blogs"
+                  className="nav-link active  all_courses"
+                  alt=""
+                >
+                  Blogs
+                </a>
               </li>
               <li className="d-flex justify-content-center align-items-center nav-item">
-                <Link to="/" className="nav-link active  all_courses" alt="">
+                <a
+                  href="#gallery"
+                  className="nav-link active  all_courses"
+                  alt=""
+                >
+                  Gallery
+                </a>
+              </li>
+              <li className="d-flex justify-content-center align-items-center nav-item">
+                <a
+                  href="#features"
+                  className="nav-link active  all_courses"
+                  alt=""
+                >
                   Features
-                </Link>
+                </a>
               </li>
               <li className="d-flex justify-content-center align-items-center nav-item">
-                <Link to="/" className="nav-link active  all_courses" alt="">
-                  About
-                </Link>
+                <a
+                  href="#about_me"
+                  className="nav-link active  all_courses"
+                  alt=""
+                >
+                  About Me
+                </a>
               </li>
               <li className="d-flex justify-content-center align-items-center nav-item">
-                <Link to="/" className="nav-link active  all_courses" alt="">
+                <a
+                  href="#contact"
+                  className="nav-link active  all_courses"
+                  alt=""
+                >
                   Contact
-                </Link>
+                </a>
               </li>
               <li className="d-flex justify-content-center align-items-center nav-item">
                 <Link

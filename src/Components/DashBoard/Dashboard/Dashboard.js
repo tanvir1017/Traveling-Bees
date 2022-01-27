@@ -12,22 +12,21 @@ import { Link, Outlet } from "react-router-dom";
 import addCourse from "../../../Img/Icons/addCourse.png";
 import admin from "../../../Img/Icons/amdin.png";
 import Home from "../../../Img/Icons/home.png";
-import manageOrder from "../../../Img/Icons/manageOrder.png";
-import Payment from "../../../Img/Icons/Payment.png";
+import Notification from "../../../Img/Icons/notification.png";
 import review from "../../../Img/Icons/review.png";
 import shop from "../../../Img/Icons/shopping cart.png";
+import UseAuth from "../../Hooks/UseAuth";
 import "./Dashboard.css";
 
 const drawerWidth = 220;
 
 function Nav(props) {
   const { window } = props;
+  const { user } = UseAuth();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
   const drawer = (
     <div>
       <Toolbar />
@@ -37,7 +36,7 @@ function Nav(props) {
             <img
               className="img-fluid side_img"
               width="100px"
-              src="https://lh3.googleusercontent.com/a-/AOh14GiidAJL084JQwMtH4Z4hoCUe9j3bC3m7HSiA5-6Mg=s96-c"
+              src={user.photoURL}
               alt=""
             />{" "}
           </div>
@@ -50,7 +49,7 @@ function Nav(props) {
             className="text-decoration-none text-white d-flex align-items-center "
             to="/"
           >
-            <span className="me-3">
+            <span className="me-3 dashboard_link_img_icon">
               <img className="img-fluid" width="25px" src={Home} alt="" />
             </span>{" "}
             Home
@@ -61,7 +60,7 @@ function Nav(props) {
             className="text-decoration-none text-white d-flex align-items-center "
             to="/dashboard/admin"
           >
-            <span className="me-3">
+            <span className="me-3 dashboard_link_img_icon">
               <img className="img-fluid" width="25px" src={admin} alt="" />
             </span>{" "}
             Admin
@@ -70,39 +69,28 @@ function Nav(props) {
         <List>
           <Link
             className="text-decoration-none text-white d-flex align-items-center "
-            to="/dashboard/userOrders"
+            to="/dashboard/courses"
           >
-            <span className="me-3">
+            <span className="me-3 dashboard_link_img_icon">
               <img className="img-fluid" width="25px" src={shop} alt="" />
             </span>{" "}
-            Your Orders
+            Blogs
           </Link>
         </List>{" "}
         <List>
           <Link
             className="text-decoration-none text-white d-flex align-items-center "
-            to="/dashboard/manageOrders"
+            to="/dashboard/notification"
           >
-            <span className="me-3">
+            <span className="me-3 dashboard_link_img_icon">
               <img
                 className="img-fluid"
                 width="25px"
-                src={manageOrder}
+                src={Notification}
                 alt=""
               />
             </span>{" "}
-            Manage Orders
-          </Link>
-        </List>{" "}
-        <List>
-          <Link
-            className="text-decoration-none text-white d-flex align-items-center "
-            to="/dashboard/courses"
-          >
-            <span className="me-3">
-              <img className="img-fluid" width="25px" src={shop} alt="" />
-            </span>{" "}
-            Courses
+            Notification
           </Link>
         </List>{" "}
         <List>
@@ -110,32 +98,32 @@ function Nav(props) {
             className="text-decoration-none text-white d-flex align-items-center "
             to="/dashboard/addCourse"
           >
-            <span className="me-3">
+            <span className="me-3 dashboard_link_img_icon">
               <img className="img-fluid" width="25px" src={addCourse} alt="" />
             </span>{" "}
-            Add Course
+            Add Blogs
           </Link>
         </List>{" "}
         <List>
+          <List>
+            <Link
+              className="text-decoration-none text-white d-flex align-items-center "
+              to="/dashboard/userOrders"
+            >
+              <span className="me-3 dashboard_link_img_icon">
+                <img className="img-fluid" width="25px" src={shop} alt="" />
+              </span>{" "}
+              Your Blogs
+            </Link>
+          </List>{" "}
           <Link
             className="text-decoration-none text-white d-flex align-items-center "
             to="/dashboard/review"
           >
-            <span className="me-3">
+            <span className="me-3 dashboard_link_img_icon">
               <img className="img-fluid" width="25px" src={review} alt="" />
             </span>{" "}
             Rate us
-          </Link>
-        </List>{" "}
-        <List>
-          <Link
-            className="text-decoration-none text-white d-flex align-items-center "
-            to="/dashboard/payment"
-          >
-            <span className="me-3">
-              <img className="img-fluid" width="25px" src={Payment} alt="" />
-            </span>{" "}
-            Payment
           </Link>
         </List>{" "}
       </div>

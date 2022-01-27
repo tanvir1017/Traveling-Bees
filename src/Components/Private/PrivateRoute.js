@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
     return (
       <img
         className="img-fluid w-25"
-        src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif"
+        src="https://upload.wikimedia.org/wikipedia/commons/2/29/Loader.gif"
       />
     );
   }

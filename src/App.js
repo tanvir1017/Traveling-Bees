@@ -7,7 +7,7 @@ import AllCourses from "./Components/DashBoard/AllCourses/AllCourses";
 import Dashboard from "./Components/DashBoard/Dashboard/Dashboard";
 import DashboardHome from "./Components/DashBoard/DashboardHome/DashboardHome";
 import ManageOrder from "./Components/DashBoard/ManageOrder/ManageOrder";
-import PaymentDash from "./Components/DashBoard/PaymentDash/PaymentDash";
+import Notification from "./Components/DashBoard/Notification/Notification";
 import Review from "./Components/DashBoard/Review/Review";
 import UserOrders from "./Components/DashBoard/UserOrder/UserOrders";
 import BLogDetails from "./Components/HomePage/BLogDetails/BLogDetails";
@@ -68,7 +68,7 @@ function App() {
                 }
               ></Route>
               <Route
-                path="/dashboard/manageOrders"
+                path="/dashboard/manageOrders/:id"
                 element={
                   <PrivateRoute>
                     <ManageOrder />
@@ -108,10 +108,10 @@ function App() {
                 }
               ></Route>
               <Route
-                path="/dashboard/payment"
+                path="/dashboard/notification"
                 element={
                   <PrivateRoute>
-                    <PaymentDash />
+                    <Notification />
                   </PrivateRoute>
                 }
               ></Route>

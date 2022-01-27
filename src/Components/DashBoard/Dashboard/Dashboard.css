@@ -11,3 +11,9 @@
   transform: translateY(-2px);
   background-color: rgb(32, 32, 32);
 }
+.dashboard_link_img_icon img {
+  transition: 0.4s;
+}
+.list_of_route a:focus .dashboard_link_img_icon img {
+  transform: rotate(-20deg);
+}
