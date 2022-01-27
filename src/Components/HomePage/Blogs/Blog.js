@@ -22,7 +22,7 @@ const Blog = ({ blog }) => {
           </div>
           <div className="blog_desc">
             <p>
-              {sub_desc.slice(0, 100)}{" "}
+              {sub_desc?.slice(0, 100)}{" "}
               <span className="">
                 <Link to={`/blogs/${_id}`}>Read More...</Link>
               </span>

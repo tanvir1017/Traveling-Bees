@@ -10,7 +10,7 @@ const Notification = () => {
     fetch("http://localhost:5000/blogs")
       .then((res) => res.json())
       .then((data) => {
-        const remaining = data.filter((blog) => blog.approved === false);
+        const remaining = data.result.filter((blog) => blog.approved === false);
         setPostedBlogs(remaining);
         setNum((num) => num + 1);
       });

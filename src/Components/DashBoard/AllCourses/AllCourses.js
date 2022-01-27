@@ -10,7 +10,7 @@ const AllCourses = () => {
     fetch("http://localhost:5000/blogs")
       .then((res) => res.json())
       .then((data) => {
-        const remaining = data.filter((blog) => blog.approved === true);
+        const remaining = data.result.filter((blog) => blog.approved === true);
         setBlogs(remaining);
       });
   }, []);

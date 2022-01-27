@@ -5,15 +5,20 @@ import "./Blogs.css";
 
 const Blogs = () => {
   const [blogPost, setBlogPost] = useState([]);
-  const size = 6;
+  const [pageCount, setPageCount] = useState(0);
+  const [page, setPage] = useState(0);
+  const size = parseInt(6);
   useEffect(() => {
-    fetch(`http://localhost:5000/blogs?size=${size}`)
+    fetch(`http://localhost:5000/blogs?page=${page}&&size=${size}`)
       .then((res) => res.json())
       .then((data) => {
-        const remaining = data.filter((blog) => blog.approved === true);
+        const remaining = data.result.filter((blog) => blog.approved === true);
         setBlogPost(remaining);
+        const count = data.count;
+        const pageNumber = Math.ceil(count / size);
+        setPageCount(pageNumber);
       });
-  }, []);
+  }, [page, size]);
 
   return (
     <div className="container  blog_wrapper">
@@ -26,6 +31,18 @@ const Blogs = () => {
       <div className="row ">
         {blogPost.map((blog) => (
           <Blog key={blog._id} blog={blog}></Blog>
+        ))}
+      </div>
+
+      <div className="pagination">
+        {[...Array(pageCount).keys()].map((num) => (
+          <button
+            className={num === page ? "selected" : ""}
+            key={num}
+            onClick={() => setPage(num)}
+          >
+            {num + 1}
+          </button>
         ))}
       </div>
       <div className="explore_btn">

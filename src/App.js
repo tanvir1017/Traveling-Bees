@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./Components/Context/AuthProvider";
 import AddCourse from "./Components/DashBoard/AddCourse/AddCourse";
-import Admin from "./Components/DashBoard/Admin/Admin";
+import MakeAdmin from "./Components/DashBoard/Admin/MakeAdmin";
 import AllCourses from "./Components/DashBoard/AllCourses/AllCourses";
 import Dashboard from "./Components/DashBoard/Dashboard/Dashboard";
 import DashboardHome from "./Components/DashBoard/DashboardHome/DashboardHome";
@@ -64,7 +64,7 @@ function App() {
                 path="/dashboard/admin"
                 element={
                   <PrivateRoute>
-                    <Admin />
+                    <MakeAdmin />
                   </PrivateRoute>
                 }
               ></Route>

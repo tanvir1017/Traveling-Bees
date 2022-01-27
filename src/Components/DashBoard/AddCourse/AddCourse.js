@@ -3,9 +3,13 @@ import swal from "sweetalert";
 import "./AddCourse.css";
 
 const AddCourse = () => {
-  const [blogPost, setBlogPost] = useState([]);
+  let date = new Date();
+  let posted_time = date.toLocaleDateString();
+  const [blogPost, setBlogPost] = useState({ approved: false, posted_time });
+  const [num, setNum] = useState(0);
   const handleLoading = (e) => {
     e.preventDefault();
+    console.log(blogPost);
     fetch("http://localhost:5000/blogs", {
       method: "POST",
       headers: {
@@ -16,16 +20,16 @@ const AddCourse = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
+          setNum(num + 1);
           swal("Good job!", "You Just Posted A Blog!", "success");
         }
       });
   };
-  let date = new Date();
-  let posted_time = date.toLocaleDateString();
+
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
-    const newPost = { ...blogPost, posted_time };
+    const newPost = { ...blogPost };
     newPost[field] = value;
     setBlogPost(newPost);
   };

@@ -18,7 +18,7 @@ intiAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
-  // const [admin, setAdmin] = useState(false);
+  const [admin, setAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   // const [token, setToken] = useState("");
   const auth = getAuth();
@@ -30,7 +30,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        // saveUer(user.email, user.displayName, "PUT");
+        saveUer(user.email, user.displayName, "PUT");
 
         if (result) {
           swal({
@@ -67,7 +67,7 @@ const useFirebase = () => {
         const newUser = { email, displayName: name };
         setUser(newUser);
         // save user data to the db
-        // saveUer(email, name, "POST");
+        saveUer(email, name, "POST");
         //   update profile
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -85,7 +85,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
   // sign in user
-  const signIn = (email, password, navigate, location) => {
+  const signIn = (email, password, location, navigate) => {
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
@@ -140,31 +140,31 @@ const useFirebase = () => {
 
     return () => unSubscribe;
   }, [auth]);
-  // // Save user to data base
-  // const saveUer = (email, displayName, methodType) => {
-  //   const user = { email, displayName };
-  //   fetch("https://desolate-taiga-27947.herokuapp.com/users", {
-  //     method: methodType,
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //     body: JSON.stringify(user),
-  //   }).then();
-  // };
+  // Save user to data base
+  const saveUer = (email, displayName, methodType) => {
+    const user = { email, displayName };
+    fetch("http://localhost:5000/users", {
+      method: methodType,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
 
-  // // Load admin api
-  // useEffect(() => {
-  //   fetch(`https://desolate-taiga-27947.herokuapp.com/users/admin${user.email}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setAdmin(data.admin));
-  // }, [user.email]);
+  // Load admin api
+  useEffect(() => {
+    fetch(`http://localhost:5000/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user.email]);
   return {
     user,
     googleSignUp,
     emailPasswordSignUp,
     logout,
     signIn,
-    // admin,
+    admin,
     error,
     isLoading,
     // token,

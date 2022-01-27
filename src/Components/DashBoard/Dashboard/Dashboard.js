@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import * as React from "react";
 import { Link, Outlet } from "react-router-dom";
 import addCourse from "../../../Img/Icons/addCourse.png";
-import admin from "../../../Img/Icons/amdin.png";
+import adminPic from "../../../Img/Icons/amdin.png";
 import Home from "../../../Img/Icons/home.png";
 import Notification from "../../../Img/Icons/notification.png";
 import review from "../../../Img/Icons/review.png";
@@ -22,7 +22,7 @@ const drawerWidth = 220;
 
 function Nav(props) {
   const { window } = props;
-  const { user } = UseAuth();
+  const { user, admin } = UseAuth();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -33,7 +33,7 @@ function Nav(props) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data.length);
-        const remaining = data.filter((post) => post.approved === false);
+        const remaining = data.result.filter((post) => post.approved === false);
         setBlogPost(remaining);
       });
   }, []);
@@ -65,47 +65,56 @@ function Nav(props) {
             Home
           </Link>
         </List>{" "}
-        <List>
-          <Link
-            className="text-decoration-none text-white d-flex align-items-center "
-            to="/dashboard/admin"
-          >
-            <span className="me-3 dashboard_link_img_icon">
-              <img className="img-fluid" width="25px" src={admin} alt="" />
-            </span>{" "}
-            Admin
-          </Link>
-        </List>{" "}
-        <List>
-          <Link
-            className="text-decoration-none text-white d-flex align-items-center "
-            to="/dashboard/courses"
-          >
-            <span className="me-3 dashboard_link_img_icon">
-              <img className="img-fluid" width="25px" src={shop} alt="" />
-            </span>{" "}
-            Blogs
-          </Link>
-        </List>{" "}
-        <List className="notification">
-          <Link
-            className="text-decoration-none text-white d-flex align-items-center "
-            to="/dashboard/notification"
-          >
-            <span className="me-3  dashboard_link_img_icon">
-              <img
-                className="img-fluid"
-                width="25px"
-                src={Notification}
-                alt=""
-              />
-            </span>{" "}
-            Notification{" "}
-            <span className="notification_length">
-              <small>{blogPost.length}</small>
-            </span>
-          </Link>
-        </List>{" "}
+        {admin && (
+          <Box>
+            <List>
+              <Link
+                className="text-decoration-none text-white d-flex align-items-center "
+                to="/dashboard/admin"
+              >
+                <span className="me-3 dashboard_link_img_icon">
+                  <img
+                    className="img-fluid"
+                    width="25px"
+                    src={adminPic}
+                    alt=""
+                  />
+                </span>{" "}
+                Admin
+              </Link>
+            </List>
+            <List>
+              <Link
+                className="text-decoration-none text-white d-flex align-items-center "
+                to="/dashboard/courses"
+              >
+                <span className="me-3 dashboard_link_img_icon">
+                  <img className="img-fluid" width="25px" src={shop} alt="" />
+                </span>{" "}
+                Blogs
+              </Link>
+            </List>{" "}
+            <List className="notification">
+              <Link
+                className="text-decoration-none text-white d-flex align-items-center "
+                to="/dashboard/notification"
+              >
+                <span className="me-3  dashboard_link_img_icon">
+                  <img
+                    className="img-fluid"
+                    width="25px"
+                    src={Notification}
+                    alt=""
+                  />
+                </span>{" "}
+                Notification{" "}
+                <span className="notification_length">
+                  <small>{blogPost.length}</small>
+                </span>
+              </Link>
+            </List>{" "}
+          </Box>
+        )}
         <List>
           <Link
             className="text-decoration-none text-white d-flex align-items-center "
