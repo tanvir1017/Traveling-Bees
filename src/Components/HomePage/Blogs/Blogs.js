@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import theTraveler from "../../../Img/course_content/The.png";
 import Blog from "./Blog";
 import "./Blogs.css";
 
@@ -25,10 +26,7 @@ const Blogs = () => {
   return (
     <div className="container  blog_wrapper">
       <div className="blog_title mb-5">
-        <img
-          src="https://meridianthemes-demo.net/the-traveler/wp-content/themes/the-traveler/images/logo.png"
-          alt=""
-        />
+        <img src={theTraveler} alt="" />
       </div>
       <div className="row ">
         {blogPost.map((blog) => (

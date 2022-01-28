@@ -4,7 +4,6 @@ import Navbar from "../../Shared/Navbar/Navbar";
 import AboutMe from "../AboutMe/AboutMe";
 import Blogs from "../Blogs/Blogs";
 import ContactUs from "../Contact/ContactUs";
-import Features from "../Features/Features";
 import Gallery from "../Gallery/Gallery";
 import HeadingSlider from "../HeadingSlider/HeadingSlider";
 import LifestyleImg from "../LifestyleImg/LifestyleImg";
@@ -24,9 +23,9 @@ const Home = () => {
       <div id="gallery">
         <Gallery />
       </div>
-      <div id="features">
+      {/* <div id="features">
         <Features />
-      </div>
+      </div> */}
       <div id="contact">
         <ContactUs />
       </div>

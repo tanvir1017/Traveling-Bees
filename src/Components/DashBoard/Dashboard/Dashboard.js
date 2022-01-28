@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -10,11 +11,14 @@ import PropTypes from "prop-types";
 import * as React from "react";
 import { Link, Outlet } from "react-router-dom";
 import addCourse from "../../../Img/Icons/addCourse.png";
+import adminUser from "../../../Img/Icons/admin.png";
 import adminPic from "../../../Img/Icons/amdin.png";
 import Home from "../../../Img/Icons/home.png";
+import logoutImg from "../../../Img/Icons/login.png";
 import Notification from "../../../Img/Icons/notification.png";
 import review from "../../../Img/Icons/review.png";
 import shop from "../../../Img/Icons/shopping cart.png";
+import normalUser from "../../../Img/Icons/user_icon.png";
 import UseAuth from "../../Hooks/UseAuth";
 import "./Dashboard.css";
 
@@ -22,7 +26,7 @@ const drawerWidth = 220;
 
 function Nav(props) {
   const { window } = props;
-  const { user, admin } = UseAuth();
+  const { user, admin, logout } = UseAuth();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -50,9 +54,31 @@ function Nav(props) {
               alt=""
             />{" "}
           </div>
+          <div className="user_name">
+            <h6>
+              <span className="user_icon_admin_icon">
+                {admin ? (
+                  <img
+                    className="img-fluid me-2"
+                    width="20px"
+                    src={adminUser}
+                    alt=""
+                  />
+                ) : (
+                  <img
+                    className="img-fluid me-2"
+                    width="20px"
+                    src={normalUser}
+                    alt=""
+                  />
+                )}
+              </span>
+              {user.displayName}{" "}
+            </h6>{" "}
+          </div>
         </div>
       </List>
-      {/* List of Route */}
+
       <div className="text-start mx-4 list_of_route">
         <List>
           <Link
@@ -147,6 +173,15 @@ function Nav(props) {
             </span>{" "}
             Rate us
           </Link>
+          <span
+            onClick={logout}
+            className="text-decoration-none logout text-white d-flex align-items-center "
+          >
+            <span className="me-3 dashboard_link_img_icon">
+              <img className="img-fluid" width="25px" src={logoutImg} alt="" />
+            </span>{" "}
+            Log out
+          </span>
         </List>{" "}
       </div>
     </div>

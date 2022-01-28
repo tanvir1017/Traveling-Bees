@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Link } from "react-router-dom";
-import login from "../../../Img/Icons/login.png";
+import logOutImg from "../../../Img/Icons/logout.png";
 import menu from "../../../Img/Icons/menu.png";
 import LoginUser from "../../../Img/Icons/user.png";
 import facebook from "../../../Img/socialIcon/Facebook.png";
@@ -104,7 +104,7 @@ const Navbar = () => {
                     alt=""
                   >
                     Log out
-                    <img className="img-fluid ms-2" src={login} alt="" />
+                    <img className="img-fluid ms-2" src={logOutImg} alt="" />
                   </span>
                 ) : (
                   <Link
@@ -113,7 +113,7 @@ const Navbar = () => {
                     alt=""
                   >
                     Login / Sign up
-                    <img className="img-fluid" src={login} alt="" />
+                    <img className="img-fluid" src={logOutImg} alt="" />
                   </Link>
                 )}
               </li>

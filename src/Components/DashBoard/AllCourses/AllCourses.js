@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import swal from "sweetalert";
+import theTraveler from "../../../Img/course_content/The (1).png";
 import Allcourse from "./Allcourse";
 import "./Allcourse.css";
 
@@ -45,10 +46,7 @@ const AllCourses = () => {
   return (
     <div className="container  allBlog_wrapper">
       <div className="blog_title ">
-        <img
-          src="https://meridianthemes-demo.net/the-traveler/wp-content/themes/the-traveler/images/logo.png"
-          alt=""
-        />
+        <img src={theTraveler} alt="" />
       </div>
       <div className="row g-0">
         {blogs.map((blog) => (

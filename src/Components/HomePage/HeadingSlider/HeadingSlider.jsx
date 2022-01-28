@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import brandLogo from "../../../Img/course_content/logo.png";
+import brandLogo from "../../../Img/Icons/logo.gif";
 import "./HeadingSlider.css";
 export default class SimpleSlider extends Component {
   render() {
@@ -14,7 +14,7 @@ export default class SimpleSlider extends Component {
     return (
       <div className="container">
         <div className="Heading_slider_wrapper">
-            <img src={brandLogo} alt="" />
+            <img src={brandLogo} className="img-fluid " alt="" />
       </div>
         <Slider {...settings}>
           

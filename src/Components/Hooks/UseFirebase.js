@@ -167,7 +167,6 @@ const useFirebase = () => {
     admin,
     error,
     isLoading,
-    // token,
   };
 };
 export default useFirebase;
