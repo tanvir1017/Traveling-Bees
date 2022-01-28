@@ -66,3 +66,11 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+
+@media screen and (max-width: 600px) {
+  .side_img {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    margin-left: 39px;
+  }
+}

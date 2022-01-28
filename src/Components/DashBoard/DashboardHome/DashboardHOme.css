@@ -1,0 +1,14 @@
+.dashboardBg {
+  width: 100%;
+  max-height: 100vh;
+}
+.dashboardBg img {
+  height: 100%;
+  width: 100%;
+  margin-top: -50px;
+}
+@media screen and (max-width: 600px) {
+  .dashboardBg img {
+    margin-top: 43px;
+  }
+}

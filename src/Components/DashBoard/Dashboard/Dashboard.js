@@ -210,7 +210,7 @@ function Nav(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon sx={{ color: "#00e1d6" }} />
+            <MenuIcon sx={{ color: "#24cb83" }} />
           </IconButton>
         </Toolbar>
       </AppBar>

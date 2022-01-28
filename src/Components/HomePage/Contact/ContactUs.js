@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import swal from "sweetalert";
 import commentGif from "../../../Img/course_content/Your.png";
 import UseAuth from "../../Hooks/UseAuth";
+import "./ContactUs.css";
 
 const ContactUs = () => {
   const { user } = UseAuth();

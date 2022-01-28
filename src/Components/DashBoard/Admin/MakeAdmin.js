@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import swal from "sweetalert";
+import "./MakeAdmin.css";
 
 const MakeAdmin = () => {
   const [email, setEmail] = useState("");

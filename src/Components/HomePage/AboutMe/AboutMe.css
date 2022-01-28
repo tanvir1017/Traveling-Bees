@@ -68,3 +68,34 @@
   background-color: #000000;
   color: #ccc8c8dc;
 }
+
+@media screen and (max-width: 600px) {
+  .overly_dark {
+    height: 236px;
+  }
+  .slider_text_about_me {
+    margin-top: -25px;
+  }
+  .slider_text_about_me span {
+    font-size: 23px;
+  }
+  .slider_text_about_me h1 {
+    font-size: 20px;
+  }
+  .slider_text {
+    position: absolute;
+    bottom: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, 30%);
+    color: white;
+  }
+  .slider_text span {
+    font-size: 20px;
+  }
+  .slider_text h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: -6px;
+  }
+}

@@ -48,3 +48,12 @@ textarea:focus {
 .default_btn:focus {
   transform: translateY(-3px);
 }
+
+@media screen and (max-width: 600px) {
+  .heading_title_add_blogs {
+    margin-top: 30px;
+  }
+  .heading_title_add_blogs h2 {
+    margin-bottom: -30px;
+  }
+}

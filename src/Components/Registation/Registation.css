@@ -75,9 +75,6 @@
     margin-top: 15px;
     margin-bottom: 15px;
   }
-  .loginForm input {
-    margin: 10px 0px 0px 10px;
-  }
   .signup_text_from_login_bottom span {
     margin: 0px 0px 0px -20px;
   }
@@ -100,5 +97,9 @@
   }
   .signup_text_from_login_bottom a {
     color: #0dce8b;
+  }
+  .loginForm input {
+    margin: 10px 0px 0px 0px;
+    width: 302px;
   }
 }

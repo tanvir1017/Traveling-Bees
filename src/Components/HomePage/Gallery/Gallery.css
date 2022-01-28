@@ -56,3 +56,12 @@
   height: 335px;
   border: 3px solid rgba(118, 247, 125, 0.541);
 }
+
+@media screen and (max-width: 600px) {
+  .blog_title img {
+    width: 100%;
+  }
+  .gallery_img {
+    margin-bottom: 5px;
+  }
+}
