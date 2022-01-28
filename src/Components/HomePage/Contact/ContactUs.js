@@ -25,7 +25,7 @@ const ContactUs = () => {
   };
   const handleLoading = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:5000/comment`, {
+    fetch(`https://peaceful-castle-84704.herokuapp.com/comment`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

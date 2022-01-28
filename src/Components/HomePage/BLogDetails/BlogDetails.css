@@ -1,0 +1,120 @@
+.bg {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.322),
+      rgba(34, 32, 32, 0.685)
+    ),
+    url(https://img.locationscout.net/images/2020-08/pura-ulun-danu-tamblingan-bali-indonesia_l.jpeg);
+  padding: 40px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.blogs_details_wrapper {
+  background-color: rgba(0, 0, 0, 0.534);
+  padding: 18px;
+  box-sizing: border-box;
+}
+.posted_time_comment {
+  color: #c5c4c4;
+  margin: 18px 0px;
+}
+.posted_time_comment span img {
+  width: 20px;
+  margin-right: 5px;
+}
+.hr {
+  border-bottom: 2px solid #f0f0f0;
+  margin: 15px 0px;
+}
+.blog_desc p {
+  color: #c5c4c4;
+  font-weight: 500;
+}
+.related_desc1 p {
+  color: #c5c4c4;
+  text-align: left;
+  font-weight: 400;
+}
+.carousel-item {
+  max-height: 380px !important;
+  overflow: hidden;
+}
+.carousel-item img {
+  height: 100% !important;
+}
+
+.author_wrapper {
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.534);
+  padding: 18px;
+  box-sizing: border-box;
+}
+.author_img {
+  text-align: center;
+}
+.author_about_body {
+  text-align: left;
+}
+.author_about_body img {
+  width: 80px;
+  border-radius: 50%;
+}
+.author_about {
+  margin: 8px 0px;
+}
+.author_about h6 {
+  color: #25df7e;
+  font-size: 16px;
+  font-weight: 700;
+}
+.author_post_time {
+  margin-top: -10px;
+}
+.author_post_time span {
+  color: #c5c4c4;
+  font-size: 12px;
+}
+.author_post_time span img {
+  margin-right: 5px;
+  width: 18px;
+}
+.writter_bio p {
+  color: #c5c4c4;
+  font-size: 18px;
+}
+.fa-facebook {
+  margin: 2px;
+  color: rgb(10, 93, 247);
+  background-color: rgba(154, 190, 255, 0.945);
+  padding: 7px 10px;
+}
+.fa-instagram {
+  margin: 2px;
+  color: rgb(19, 9, 9);
+  background-color: rgba(231, 152, 212, 0.973);
+  padding: 7px 10px;
+}
+
+.fa-youtube {
+  margin: 2px;
+  color: rgb(255, 1, 1);
+  background-color: rgba(207, 110, 110, 0.767);
+  padding: 7px 10px;
+}
+.author_about_wrapper {
+  background-color: rgba(0, 0, 0, 0.534);
+  padding: 18px;
+  box-sizing: border-box;
+  color: #c5c4c4;
+}
+
+.author_about_body {
+  margin: 15px 0px;
+  text-align: center;
+  color: #c5c4c4;
+}
+.author_about_body p {
+  font-weight: 500;
+}
